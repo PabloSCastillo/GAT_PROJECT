@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\GAT_PROJECT.props" />
+</Project>
