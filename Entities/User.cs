@@ -17,6 +17,12 @@ namespace GAT_PROJECT.Models
         public int score { get; set; }
 
         //public List<Course> Courses { set; get; }
+        public string ToString()
+        {
+            return "\nUsername: " + Username + "\n" +
+                    "Name: " + Name + "\n" + "Email: " + Email + "\n";
+        }
+
 
     }
 }
