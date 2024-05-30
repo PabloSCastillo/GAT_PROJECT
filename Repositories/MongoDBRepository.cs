@@ -9,7 +9,7 @@ namespace GAT_PROJECT.Repositories
         public MongoDBRepository()
         {
             client = new MongoClient("mongodb://localhost:27017");
-            db = client.GetDatabase("GatDB");
+            db = client.GetDatabase("gat_project");
         }
     }
 }

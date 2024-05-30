@@ -7,7 +7,11 @@ namespace GAT_PROJECT.Repositories
     public class CourseCollection : ICourseCollection
     {
         internal MongoDBRepository _repository = new MongoDBRepository();
-        private IMongoCollection<Course> Collection;
+        private IMongoCollection<Course> Collection; public CourseCollection()
+        {
+            Collection = _repository.db.GetCollection<Course>("Courses");
+        }
+
         public async Task DeleteCourse(string id)
         {
             var filter = Builders<Course>.Filter.Eq(s => s.Id, new ObjectId(id));

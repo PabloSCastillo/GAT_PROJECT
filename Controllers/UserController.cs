@@ -10,20 +10,27 @@ namespace GAT_PROJECT.Controllers
     public class UserController : ControllerBase
     {
         private IUserCollection db = new UserCollection();
-
+        private readonly ILogger<UserController> _logger;
+        public UserController(ILogger<UserController> logger)
+        {
+            _logger = logger;
+        }
         [HttpGet]
         public async Task<ActionResult<IEnumerable<User>>> GetUsers()
         {
+            _logger.LogInformation("UserController - GetUsers");
             return Ok(await db.GetAllUsers());
         }
         [HttpGet("{id}")]
         public async Task<ActionResult<IEnumerable<User>>> GetUserDetails(string id)
         {
+            _logger.LogInformation("GetUserDetails");
             return Ok(await db.GetUserById(id));
         }
         [HttpPost]
         public async Task<IActionResult> CreateUser([FromBody] User user)
         {
+            _logger.LogInformation("UserController - CreateUser user: {user} ", user.ToString());
             if (user == null)
             {
                 return BadRequest();
@@ -56,7 +63,7 @@ namespace GAT_PROJECT.Controllers
         }
         [HttpDelete]
         public async Task<IActionResult> DeleteUser(string id)
-        { 
+        {
             await db.DeleteUser(id);
             return NoContent();
         }

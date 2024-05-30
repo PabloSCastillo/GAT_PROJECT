@@ -1526,19 +1526,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\pabli\\.nuget\\packages\\": {}
+    "/home/onion/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\_Things_\\Code\\C#\\GAT_PROJECT\\GAT_PROJECT.csproj",
+      "projectUniqueName": "/home/onion/Documents/dev/c#/GAT_PROJECT/GAT_PROJECT.csproj",
       "projectName": "GAT_PROJECT",
-      "projectPath": "D:\\_Things_\\Code\\C#\\GAT_PROJECT\\GAT_PROJECT.csproj",
-      "packagesPath": "C:\\Users\\pabli\\.nuget\\packages\\",
-      "outputPath": "D:\\_Things_\\Code\\C#\\GAT_PROJECT\\obj\\",
+      "projectPath": "/home/onion/Documents/dev/c#/GAT_PROJECT/GAT_PROJECT.csproj",
+      "packagesPath": "/home/onion/.nuget/packages/",
+      "outputPath": "/home/onion/Documents/dev/c#/GAT_PROJECT/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\pabli\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/home/onion/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -1556,11 +1556,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -1603,7 +1598,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.105/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
