@@ -19,6 +19,12 @@ namespace GAT_PROJECT.Controllers
         public async Task<ActionResult<IEnumerable<User>>> GetUsers()
         {
             _logger.LogInformation("UserController - GetUsers {DT}", DateTime.UtcNow.ToLongTimeString());
+            List<User> users = await db.GetAllUsers();
+            foreach (User user in users)
+            {
+                System.Console.WriteLine(user.Id.ToString());
+            }
+            System.Console.WriteLine();
             return Ok(await db.GetAllUsers());
         }
         [HttpGet("{id}")]

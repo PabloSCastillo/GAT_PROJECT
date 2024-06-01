@@ -6,6 +6,8 @@ namespace GAT_PROJECT.Entities
     public class Course
     {
         [BsonId]
+        [BsonRepresentation(BsonType.ObjectId)]
+        [BsonElement("idCourse")]
         public ObjectId Id { get; set; }
         [BsonElement("name")]
         public string Name { get; set; }

@@ -10,12 +10,15 @@ namespace GAT_PROJECT.Models
     public class User
     {
         [BsonId]
+        
         public ObjectId Id { get; set; }
         public string Username { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
-        public int score { get; set; }
-
+        public int Score { get; set; }
+ 
+        [BsonElement("idCourse")]
+        public List<Course> Courses { get; set; }
         //public List<Course> Courses { set; get; }
         public string ToString()
         {
