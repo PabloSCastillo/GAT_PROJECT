@@ -1,5 +1,6 @@
 ﻿using GAT_PROJECT.Entities;
 using GAT_PROJECT.Repositories;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,6 +11,7 @@ namespace GAT_PROJECT.Controllers
     public class CourseController : ControllerBase
     {
         private ICourseCollection db = new CourseCollection();
+  
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Course>>> GetCourses()
         {
