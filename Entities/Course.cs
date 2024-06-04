@@ -13,8 +13,10 @@ namespace GAT_PROJECT.Entities
         public string Name { get; set; }
         [BsonElement("description")]
         public string Description { get; set; }
-        [BsonElement("level")]
-        public string level { get; set; }
+      
+        [BsonElement("idLevel")]
+        [BsonRepresentation(BsonType.String)]
+        public Level Difficult { get; set; }
 
 
     }

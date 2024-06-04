@@ -15,6 +15,13 @@ namespace GAT_PROJECT.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Course>>> GetCourses()
         {
+            List<Course> courses = await db.GetAllCourses();
+            foreach (Course course in courses)
+            {
+                System.Console.WriteLine(course.Id.ToString() + "\n"
+                + course.Name);
+            }
+            System.Console.WriteLine();
             return Ok(await db.GetAllCourses());
         }
         [HttpGet("{id}")]
