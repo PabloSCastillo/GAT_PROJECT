@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GAT_PROJECT")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eb6ba8dd6f52b428b9c54db3877ff1ad3aed3d82")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2fadae3c4f60cfe68db21d95402ba1e80588fe9d")]
 [assembly: System.Reflection.AssemblyProductAttribute("GAT_PROJECT")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GAT_PROJECT")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

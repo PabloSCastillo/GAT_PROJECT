@@ -15,7 +15,7 @@ namespace GAT_PROJECT.Entities
         public string Description { get; set; }
       
         [BsonElement("idLevel")]
-        [BsonRepresentation(BsonType.String)]
+     
         public Level Difficult { get; set; }
 
 
