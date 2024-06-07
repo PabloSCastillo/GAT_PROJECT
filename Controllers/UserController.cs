@@ -19,6 +19,13 @@ namespace GAT_PROJECT.Controllers
         public async Task<ActionResult<IEnumerable<User>>> GetUsers()
         {
             _logger.LogInformation("UserController - GetUsers {DT}", DateTime.UtcNow.ToLongTimeString());
+            List<User> users = await db.GetAllUsers();
+            foreach (User user in users)
+            {
+                System.Console.WriteLine(
+                    "id:" + user.Id.ToString() +
+                    "\nusername:" + user.Username + "\n");
+            }
             return Ok(await db.GetAllUsers());
         }
         [HttpGet("{id}")]
@@ -59,11 +66,12 @@ namespace GAT_PROJECT.Controllers
             user.Id = new MongoDB.Bson.ObjectId(id);
             await db.UpdateUser(user);
 
-            return Created("Created", true);
+            return Created("Updated", true);
         }
         [HttpDelete]
         public async Task<IActionResult> DeleteUser(string id)
         {
+            _logger.LogInformation("UserController -DeleteUser userId: {id}", id);
             await db.DeleteUser(id);
             return NoContent();
         }
